@@ -11,6 +11,21 @@ En ese contexto, el presente proyecto pretende ser una alternativa que contribuy
 
 De esta forma, esta propuesta está enfocada en la ODS 16: Paz, justicia e instituciones sólidas, la cual busca reducir significativamente todas las formas de violencia y las correspondientes tasas de mortalidad en todo el mundo.
 
+## Trabajos relacionados
+La detección de violencia es un tema bastante estudiado en el campo de la vision artificial, ya que busca darle mas funcionalidad a las camaras de vigilancia, detectando escenas de violencia para un pronto actuar y disminuir el tiempo de respuesta ante estas situaciones. 
+Por esto encontramos diferentes articulos cientificos los cuales presentan el uso de diferentes métodos para resolver este problema o hacerlo mas eficiente. 
+
+Uno de los métodos mas utilizado es el de transferencia de aprendizaje usando redes convolucionales profundas. Este método es bastante utilizado dada la falta de un conjunto de datos amplio o suficientemente grande como para obtener los resultados esperados. Se utilizan diferentes modelos como ser YOLO, Inception y VGG_16. Pero también se encontró trabajos donde se proponen nuevos modelos como ser "FightNet" o por otro lado se encotrarón trabajos que comparan diferentes soluciones propuestas y crean un benchmark entre ellas.
+
+## Métodos utilizados
+Para la realización de este proyecto se utilizó el método de transferencia de aprendizaje usando redes convolucionales profundas, se propone utilizar el modelo Inception V3 con los pesos del conjunto de datos ImageNet, para entrenar el módelo se utilizó un conjunto de datos abierto, que se encuentra en la plataforma Kaggle. Este conjunto de datos cuenta con dos clases: Violence y Non-Violence con 1000 videos cortos en cada clase. Estos videos fueron recolectados de youtube.
+Al iniciar el proyecto se hizo la prueba con diferentes modelos, los cuales eran: yolo_lite, mobileNet, VGG_16, ResNet101V2 y por último Inception V3. Se decidio usar Inception V3 dado que se obtenia el mayor nivel de precision con este modelo. 
+Para entrenar nuestro modelo con nuestros datos se dividió el conjunto de datos en 2, entrenamiento y prueba, teniendo el conjunto de datos de prueba un 20% del total del conjunto de datos. 
+El modelo fue entrenado utilizando ADAM como funcion de optimización, binary_crossentropy como función de pérdida y se usó el accuracy y el f1_score como métricas del entrenamiento.
+
+## Resultados experimentales
+El modelo fue entrenado varias veces, durante el proceso de Fine tunning de los hiperparametros. Como resultado de la métrica con el conjunto de prueba se obtuvo un 76% y un 80% en el conjunto de datos de prueba.
+
 ## Capturas de pantalla
 Incluir logos o capturas de pantalla de las interfaces mas relevantes del proyecto.
 
@@ -23,15 +38,13 @@ Incluir logos o capturas de pantalla de las interfaces mas relevantes del proyec
 Clasificación de videos que incluyen escenas de violencia o no.
 
 ## Instalación
-Proveer de una guía paso a paso con ejemplos sobre como obtener un ambiente de desarrollo corriendo con el presente repositorio. 
-En el caso de tener varios repositorios, realizar la guía correspondiente para cada uno.
+El proyecto se debe trabajar en un ambiente de Python configurado para trabajar con tensorflow. Una vez clonado el proyecto se debe abrir el notebook con algún editor de texto o con Jupyter Notebooks, para luego ejecutar las celdas en orden. 
 
 ## Creditos
-Edson Segales
-Flavio Abdon
-Jasiel Renteria
-Joshua Nostas
-Nombrar a los participantes del equipo. Mencionar alguna libreria que fue útil o sirvió de inspiración para prototipar el proyecto. 
+- Edson Segales
+- Flavio Abdon
+- Jasiel Renteria
+- Joshua Nostas
 
 ## Licencia
 
