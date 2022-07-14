@@ -1,6 +1,9 @@
 # Detección de escenas de violencia
 El presente proyecto pretende ser una alternativa que contribuya a mejorar la seguridad ciudadana, a través de un sistema que permita identificar hechos de violencia, lo cual podría ser utilizado para implementar un mecanismo de prevención y/o alerta ya que detecta escenas de violencia en videos, ya sean captados con camaras de vigilancia o tambien con grabaciones de celulares. 
 
+## Link al video de presentación
+https://drive.google.com/file/d/1Hf-anOS1iNOhJtGJCNOEI5GqMjjr6Tby/view?usp=sharing
+
 ## Syntax-error
 Código del proyecto final para el Bootcamp para los Objetivos de Desarrollo Sostenible de HackCities desarrollado con Python.
 
